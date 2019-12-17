@@ -10,14 +10,14 @@ public:
 	Node<T>* head;
 	int size;
 public:
-	List(int n) {
-		head = new Node<int>; // выделяется память под один квадратик
+	List(int n) { 
+		head = new Node<int>; // ГўГ»Г¤ГҐГ«ГїГҐГІГ±Гї ГЇГ Г¬ГїГІГј ГЇГ®Г¤ Г®Г¤ГЁГ­ ГЄГўГ Г¤Г°Г ГІГЁГЄ
 		size = n;
-		Node<int>* tmp = head; // создаем квадратик как хеад
+		Node<int>* tmp = head; // Г±Г®Г§Г¤Г ГҐГ¬ ГЄГўГ Г¤Г°Г ГІГЁГЄ ГЄГ ГЄ ГµГҐГ Г¤
 		for (int i = 0; i < n; i++) {
-			Node<int>* tmp2 = new Node<int>; // создаем какой-то квадратик
-			tmp->next = tmp2; // связали два квадрата
-			tmp = tmp2; // перешли на tmp2
+			Node<int>* tmp2 = new Node<int>; // Г±Г®Г§Г¤Г ГҐГ¬ ГЄГ ГЄГ®Г©-ГІГ® ГЄГўГ Г¤Г°Г ГІГЁГЄ
+			tmp->next = tmp2; // Г±ГўГїГ§Г Г«ГЁ Г¤ГўГ  ГЄГўГ Г¤Г°Г ГІГ 
+			tmp = tmp2; // ГЇГҐГ°ГҐГёГ«ГЁ Г­Г  tmp2
 		}
 	}
 	void change_head_coeff(int a) {
@@ -37,15 +37,15 @@ public:
 		i->data = k->data;
 	}
 	List<T>() {
-		head = new Node<T>; // выделяется память под один квадратик
+		head = new Node<T>; // ГўГ»Г¤ГҐГ«ГїГҐГІГ±Гї ГЇГ Г¬ГїГІГј ГЇГ®Г¤ Г®Г¤ГЁГ­ ГЄГўГ Г¤Г°Г ГІГЁГЄ
 		size = 1;
 	}
 	void insert(T data, Node<T>* prev) {
-		Node<T>* a = new Node<T>; // создали квадратик а
-		a->data = data; // положили туда данные
-		Node<T>* b = prev->next; // в b мы сохраняем адрес следующего
-		prev->next = a; // связываем с a
-		a->next = b; // a связываем со следующим
+		Node<T>* a = new Node<T>; // Г±Г®Г§Г¤Г Г«ГЁ ГЄГўГ Г¤Г°Г ГІГЁГЄ Г 
+		a->data = data; // ГЇГ®Г«Г®Г¦ГЁГ«ГЁ ГІГіГ¤Г  Г¤Г Г­Г­Г»ГҐ
+		Node<T>* b = prev->next; // Гў b Г¬Г» Г±Г®ГµГ°Г Г­ГїГҐГ¬ Г Г¤Г°ГҐГ± Г±Г«ГҐГ¤ГіГѕГ№ГҐГЈГ®
+		prev->next = a; // Г±ГўГїГ§Г»ГўГ ГҐГ¬ Г± a
+		a->next = b; // a Г±ГўГїГ§Г»ГўГ ГҐГ¬ Г±Г® Г±Г«ГҐГ¤ГіГѕГ№ГЁГ¬
 		size++;
 	}
 	int Size() {
@@ -92,7 +92,7 @@ public:
 		a->next = b;
 		size++;
 	}
-	int& Getelem(Node<int>* i) { // без ссылки вернется копия
+	int& Getelem(Node<int>* i) { // ГЎГҐГ§ Г±Г±Г»Г«ГЄГЁ ГўГҐГ°Г­ГҐГІГ±Гї ГЄГ®ГЇГЁГї
 		return i->data;
 	}
 	int search(int k) {
